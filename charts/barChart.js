@@ -1,5 +1,5 @@
 function drawBarChart(svgClass) {
-  // This gives you access to the correct svg through the className
+  // This gives you access to the correct svg through the class name
   let svg = d3.select(svgClass);
 
   let width = 900;
@@ -7,6 +7,7 @@ function drawBarChart(svgClass) {
   let margin = 25;
   let marginBottom = margin * 2;
 
+  // This is mock data. You can replace this with a JSON file or live link. 
   let data = [
     { "day": "Sunday", "value": 5 },
     { "day": "Monday", "value": 25 },
@@ -16,7 +17,6 @@ function drawBarChart(svgClass) {
     { "day": "Friday", "value": 30 },
     { "day": "Saturday", "value": 25 },
   ]
-
 
   // Set x and y scale
   let xScale = d3.scaleBand()
@@ -28,8 +28,7 @@ function drawBarChart(svgClass) {
     .range([height - marginBottom, marginBottom])
     .domain([0, d3.max(data.map(d => d["value"]))]);
 
-
-  // Draw Bars
+  // Draw bars
   svg.selectAll("bar")
     .data(data)
     .enter()

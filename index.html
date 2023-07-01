@@ -2,22 +2,30 @@
   <head>
     <title>LEDE D3 Template - please edit me!</title>
     <meta charset="utf-8" />
-  
+
+    <!-- This is the import for the d3 library -->
     <script src="https://d3js.org/d3.v7.min.js"></script>
+
     <!-- Here is where you can import your Javascript scripts -->
     <script type="text/javascript" src="charts/barChart.js"></script>
 
     <!-- Here is where you can import your CSS files -->
-    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/main.css" />
   </head>
 
   <body>
-    <!-- The HTML for the svgs are initialized here -->
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris</p>
+    <!-- The HTML for the svgs and page is initialized here -->
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+      veniam, quis nostrud exercitation ullamco laboris
+    </p>
     <h3>Chart 1</h3>
     <svg height="300" width="900" class="barChartViz"></svg>
+    
     <script>
-      // Create a function for each chart to organize your code 
+      // Create a function for each chart to organize your code.
+      // This function is imported in from barChart.js (see line 8)
       drawBarChart(".barChartViz");
     </script>
   </body>
